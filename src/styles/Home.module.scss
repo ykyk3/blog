@@ -1,0 +1,6 @@
+@use './window.scss' as variables;
+.container {
+    @include variables.mediaQuery(xl) {
+        background-color: red;
+    }
+}
