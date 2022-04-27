@@ -1,0 +1,14 @@
+$breakpoints: (
+    'sm': 576px,
+    'md': 768px,
+    'lg': 992px,
+    'xl': 1200px
+);
+@function getBreakPoint($size) {
+    @return map-get($breakpoints, $size);
+}
+@mixin mediaQuery($size) {
+    @media screen and (max-width: #{getBreakPoint($size)}) {
+        @content;
+    }
+}
